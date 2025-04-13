@@ -1,0 +1,8 @@
+# Bật mod_rewrite
+RewriteEngine On
+
+# Đảm bảo rằng tất cả các yêu cầu sẽ được chuyển đến thư mục public
+RewriteRule ^(dangky|dangnhap)$ public/$1.php [L]
+
+# Nếu không phải là các tệp dangky.php hoặc dangnhap.php, sẽ tìm và trả về trang index.php
+RewriteRule ^$ index.php [L]
