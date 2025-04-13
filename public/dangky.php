@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy thông tin từ form
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Mã hóa mật khẩu
+    $password = $_POST['password']; // Không mã hóa nữa
     $email = $_POST['email'];
 
     // Sử dụng prepared statements để tránh SQL Injection
@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close(); // Đóng kết nối MySQL
 ?>
+
 
 <!DOCTYPE html>
 <html lang="vi">

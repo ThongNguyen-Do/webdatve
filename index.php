@@ -56,8 +56,6 @@
         <a href="public/dangnhap.php" class="btn">Đăng nhập</a>
     </div>
 
-    <footer>
-        &copy; 2025 Đặt Vé Xem Phim. All rights reserved.
-    </footer>
+    
 </body>
 </html>

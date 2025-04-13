@@ -16,8 +16,8 @@ if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// Lấy danh sách phim
-$sql = "SELECT * FROM movies"; // Giả sử bảng là `movies`
+
+$sql = "SELECT * FROM movies"; 
 $result = $conn->query($sql);
 ?>
 
@@ -29,14 +29,14 @@ $result = $conn->query($sql);
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: #f5f5f5;
+            background: linear-gradient(to right, #141E30, #243B55);
             margin: 0;
             padding: 0;
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: white;
             margin-top: 20px;
         }
 
@@ -84,7 +84,7 @@ $result = $conn->query($sql);
         }
 
         .btn {
-            background-color: #FF6347;
+            background-color: #1e3c72;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -132,7 +132,7 @@ $result = $conn->query($sql);
                 <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="Poster of <?= htmlspecialchars($row['title']) ?>">
                 <h3><?= htmlspecialchars($row['title']) ?></h3>
                 <p><?= nl2br(htmlspecialchars($row['description'])) ?></p>
-                <a href="datve.php?phim_id=<?= $row['id'] ?>" class="btn">Đặt vé</a>
+                <a href="chitietphim.php?phim_id=<?= $row['id'] ?>" class="btn">Đặt vé</a>
             </div>
         <?php
             endwhile;
